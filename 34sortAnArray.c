@@ -1,18 +1,21 @@
 #include <stdio.h>
 
-int sort(char array[], int size);  // For Numbers
-int printArray(char array[], int size); // For Latters
+int sort(int array[], int size);  // For Numbers
+int printArray(int array[], int size); // For Number
+
+// int sort(char array[], int size);       // For Latter
+// int printArray(char array[], int size); // For Latters
 
 int main () {
-    // int array[] = {9, 4, 6, 7, 2, 5, 8, 1, 0};  // For Numbers
-    char array[] = {'F', 'D', 'B', 'A', 'C'}; // For Latters
+    int array[] = {9, 4, 6, 7, 2, 5, 8, 1, 0};  // For Numbers
+    // char array[] = {'F', 'D', 'B', 'A', 'C'}; // For Latters
     int size = sizeof(array) / sizeof(array[0]);
     sort(array, size);
     printArray(array, size);
     return 0;
 }
 
-int sort (char array[], int size) {
+int sort (int array[], int size) {
 
     for (int i = 0; i < size - 1; i++) {
         for (int j = 0; j < size - 1; j++) {
@@ -26,11 +29,12 @@ int sort (char array[], int size) {
     return 0;
 }
 
-int printArray (char array[], int size) {
+// int printArray (char array[], int size) { // For Latter
+int printArray (int array[], int size) { // For Number
 
     for (int i = 0; i < size; i++) {
-        // printf("%d ", array[i]);  // For Numbers
-        printf("%c ", array[i]); // For Latters
+        printf("%d ", array[i]);  // For Numbers
+        // printf("%c ", array[i]); // For Latters
     }
     printf("\n");
     return 0;
